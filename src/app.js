@@ -6,7 +6,11 @@ const referralRoutes = require('./routes/referralRoutes');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://accredian-frontend-task-7q3g.vercel.app/',
+  methods: 'GET,POST',
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api', referralRoutes);

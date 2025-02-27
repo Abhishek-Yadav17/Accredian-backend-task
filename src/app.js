@@ -6,7 +6,7 @@ const referralRoutes = require('./routes/referralRoutes');
 dotenv.config();
 
 const app = express();
-const allowedOrigins = ['https://accredian-frontend-task-7q3g.vercel.app/'];
+const allowedOrigins = ['https://accredian-frontend-task-7q3g.vercel.app'];
 app.use(cors({
   origin: function(origin, callback) {
     if (allowedOrigins.includes(origin) || !origin) {

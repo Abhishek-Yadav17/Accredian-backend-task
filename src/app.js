@@ -8,13 +8,7 @@ dotenv.config();
 const app = express();
 const allowedOrigins = ['https://accredian-frontend-task-7q3g.vercel.app'];
 app.use(cors({
-  origin: function(origin, callback) {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: "*",
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
